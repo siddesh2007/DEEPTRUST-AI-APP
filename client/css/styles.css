@@ -1,0 +1,135 @@
+/* Base styling with a dark minimal theme for security vibe */
+:root {
+    --bg-color: #0f172a;
+    --card-bg: #1e293b;
+    --text-primary: #f8fafc;
+    --text-secondary: #94a3b8;
+    --accent: #3b82f6;
+    --error: #ef4444;
+    --success: #22c55e;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.login-container, .dashboard-container {
+    background-color: var(--card-bg);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+    width: 100%;
+    max-width: 400px;
+}
+
+.dashboard-container {
+    max-width: 1000px;
+}
+
+h2 {
+    margin-top: 0;
+    text-align: center;
+    color: var(--text-primary);
+}
+
+.input-group {
+    margin-bottom: 1.5rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--text-secondary);
+    font-size: 0.875rem;
+}
+
+input[type="text"], input[type="password"] {
+    width: 100%;
+    padding: 0.75rem;
+    border-radius: 6px;
+    border: 1px solid #334155;
+    background-color: #0f172a;
+    color: var(--text-primary);
+    box-sizing: border-box;
+    transition: border-color 0.2s;
+}
+
+input:focus {
+    outline: none;
+    border-color: var(--accent);
+}
+
+button {
+    width: 100%;
+    padding: 0.875rem;
+    border: none;
+    border-radius: 6px;
+    background-color: var(--accent);
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+button:hover {
+    background-color: #2563eb;
+}
+
+.stage-section {
+    margin-bottom: 1.5rem;
+}
+
+#webcamFeed {
+    width: 100%;
+    border-radius: 8px;
+    background-color: #000;
+    margin-bottom: 1rem;
+    height: 150px;
+    object-fit: cover;
+}
+
+.status-message {
+    margin-top: 1rem;
+    text-align: center;
+    font-size: 0.875rem;
+}
+
+.status-message.error {
+    color: var(--error);
+}
+
+.status-message.success {
+    color: var(--success);
+}
+
+.captcha-box {
+    border: 1px solid #334155;
+    border-radius: 8px;
+    padding: 0.75rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.captcha-title {
+    color: var(--text-secondary);
+    font-size: 0.875rem;
+}
+
+.captcha-code {
+    background: #0f172a;
+    border: 1px dashed #334155;
+    border-radius: 6px;
+    font-weight: 700;
+    letter-spacing: 0.12rem;
+    padding: 0.5rem;
+    text-align: center;
+}

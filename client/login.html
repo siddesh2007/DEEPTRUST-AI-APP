@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deep Trust Authentication Gateway</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/login.css">
+</head>
+<body class="login-page">
+    <div class="intro-overlay" id="intro-overlay" aria-hidden="true">
+        <div class="intro-scanline"></div>
+        <div class="intro-nodes">
+            <span class="intro-node">IP Node Online</span>
+            <span class="intro-node">OS Profile Indexed</span>
+            <span class="intro-node">Browser Signature Verified</span>
+        </div>
+        <div class="intro-counter" id="intro-counter">Risk Engine 00%</div>
+    </div>
+
+    <div class="grid-overlay" aria-hidden="true"></div>
+    <div class="particle-field" id="particle-field" aria-hidden="true"></div>
+    <div class="volumetric-glow" aria-hidden="true"></div>
+    <div class="bg-shape shape-one" aria-hidden="true"></div>
+    <div class="bg-shape shape-two" aria-hidden="true"></div>
+    <div class="bg-shape shape-three" aria-hidden="true"></div>
+
+    <main class="login-shell">
+        <section class="gateway-layout">
+            <aside class="intel-panel" aria-label="AI security visualization">
+                <div class="intel-header">
+                    <h1 class="intel-title">Deep Trust Command Gateway</h1>
+                    <p class="intel-subtitle">Enterprise zero-trust authentication with adaptive AI risk intelligence.</p>
+                </div>
+
+                <div class="intel-grid-card">
+                    <div class="intel-grid-lines"></div>
+                    <div class="intel-orb"></div>
+                    <ul class="intel-feed" id="intel-feed">
+                        <li>Device intelligence stream synchronized</li>
+                        <li>Behavior telemetry listener active</li>
+                        <li>Biometric trust engine standby</li>
+                    </ul>
+                </div>
+
+                <div class="intel-stats">
+                    <div class="stat-box">
+                        <span class="stat-label">Runtime</span>
+                        <span class="stat-value" id="runtime-clock">00:00:00</span>
+                    </div>
+                    <div class="stat-box">
+                        <span class="stat-label">Trust Layer</span>
+                        <span class="stat-value">Adaptive Multi-Layer</span>
+                    </div>
+                </div>
+
+                <section class="left-wave-panel" aria-label="Behavior waveform">
+                    <div class="left-wave-header">
+                        <span>Behavioral Waveform</span>
+                        <span id="left-wave-score">Match 30%</span>
+                    </div>
+                    <div class="left-wave" id="left-wave">
+                        <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+                    </div>
+                </section>
+            </aside>
+
+            <section class="auth-flip-wrap">
+                <div class="auth-flip" id="auth-flip">
+            <section class="login-card auth-face auth-front" id="login-card" aria-labelledby="login-title">
+                <header class="login-header">
+                    <div class="badge-row">
+                        <span class="security-badge" id="security-badge">Deep Trust Security Active</span>
+                        <span class="security-pill">Zero-Trust</span>
+                    </div>
+                    <h2 id="login-title">Secure Admin Login</h2>
+                    <p class="subtitle">Secure signal collection active. Backend risk engine controls all trust decisions.</p>
+                </header>
+
+                <div class="security-indicators" aria-label="Security hardening indicators">
+                    <span class="indicator-chip" id="rate-limit-chip">⛨ Rate Limiting</span>
+                    <span class="indicator-chip" id="encrypt-chip">🔒 Encrypted Session</span>
+                    <span class="indicator-chip" id="zt-chip">✓ Zero-Trust Verified</span>
+                    <span class="indicator-chip" id="fp-chip">◎ Fingerprint Validated</span>
+                </div>
+
+                <section class="risk-panel" id="risk-panel" aria-label="Real-time risk indicator">
+                    <div class="risk-row">
+                        <span class="risk-label">Live Risk Intelligence</span>
+                        <span class="risk-level" id="risk-level">INITIALIZING</span>
+                    </div>
+                    <div class="risk-meter" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+                        <div class="risk-meter-fill" id="risk-meter-fill"></div>
+                    </div>
+                    <div class="risk-ticker" id="risk-ticker">000</div>
+                    <div class="pattern-row">
+                        <span>Behavior Match</span>
+                        <strong id="behavior-match">30%</strong>
+                    </div>
+                    <p class="risk-value" id="risk-value">Awaiting device intelligence…</p>
+                </section>
+
+                <form id="login-form" autocomplete="off" novalidate>
+                    <div class="field floating-field">
+                        <input id="username" name="username" type="email" required placeholder=" ">
+                        <label for="username">Admin ID</label>
+                    </div>
+
+                    <div class="field floating-field">
+                        <input id="password" name="password" type="password" required placeholder=" ">
+                        <label for="password">Password</label>
+                        <button type="button" class="field-action" id="toggle-password" aria-label="Show password">Show</button>
+                        <div class="typing-wave" id="typing-wave" aria-hidden="true">
+                            <span></span><span></span><span></span><span></span><span></span><span></span>
+                        </div>
+                    </div>
+
+                    <div class="caps-lock-warning" id="caps-lock-warning" hidden>Caps Lock is ON</div>
+
+                    <div class="login-options-row">
+                        <label class="remember-option"><input type="checkbox" id="remember-me"> Remember this device</label>
+                    </div>
+
+                    <button type="submit" id="login-btn" class="primary-btn">
+                        <span id="btn-text">Authenticate</span>
+                        <span class="btn-spinner" id="btn-spinner" aria-hidden="true"></span>
+                        <span class="btn-check" id="btn-check" aria-hidden="true">✓</span>
+                        <span class="btn-ripple" id="btn-ripple" aria-hidden="true"></span>
+                    </button>
+
+                    <section class="scan-progress" id="scan-progress" hidden aria-live="polite">
+                        <div class="scan-step" id="scan-step-text">Scanning device...</div>
+                        <div class="scan-track"><span id="scan-progress-fill"></span></div>
+                        <div class="scan-value" id="scan-progress-value">0%</div>
+                    </section>
+                </form>
+
+                <div class="register-row">
+                    <span>New admin?</span>
+                    <button type="button" class="link-btn" id="open-register">Create secure account</button>
+                </div>
+
+                <section id="face-container" class="capture-panel" aria-label="Biometric capture">
+                    <div class="capture-title">Biometric Verification</div>
+                    <div class="face-module" id="face-module">
+                        <div class="face-scanner-ring"></div>
+                        <div class="face-sweep"></div>
+                        <video id="webcamFeed" autoplay muted playsinline></video>
+                        <div class="face-mesh"></div>
+                        <div class="face-confidence" id="face-confidence">AI 00%</div>
+                    </div>
+                    <div class="face-controls">
+                        <button type="button" class="ghost-btn" id="capture-face-btn">Capture Face</button>
+                        <span class="capture-state" id="capture-state">Waiting for capture</span>
+                    </div>
+                    <div class="liveness-pass" id="liveness-pass" hidden>✓ Liveness check passed</div>
+                    <p class="capture-hint" id="biometric-hint">Liveness check: Blink prompt · Head tilt prompt · Reflection scan</p>
+                </section>
+
+                <section id="captcha-container" class="capture-panel" aria-label="Adaptive challenge">
+                    <div class="capture-title">Smart AI CAPTCHA</div>
+                    <p class="capture-hint" id="captcha-hint">Invisible behavior verification active.</p>
+                    <div class="advanced-captcha" id="advanced-captcha" hidden>
+                        <label for="captcha-slider">Advanced verification slider</label>
+                        <input type="range" id="captcha-slider" min="0" max="100" value="0">
+                        <div class="captcha-score" id="captcha-score">Slider Confidence 0%</div>
+                    </div>
+                </section>
+                <div id="auth-status" class="auth-status" role="status" aria-live="polite"></div>
+            </section>
+            <section class="login-card auth-face auth-back" id="register-card" aria-labelledby="register-title">
+                <header class="login-header">
+                    <div class="badge-row">
+                        <span class="security-badge">Enterprise Onboarding</span>
+                        <span class="security-pill">Secure Register</span>
+                    </div>
+                    <h2 id="register-title">Create Admin Account</h2>
+                    <p class="subtitle">Register your enterprise identity with biometric baseline and trusted device enrollment.</p>
+                </header>
+
+                <form id="register-form" autocomplete="off" novalidate>
+                    <div class="field floating-field">
+                        <input id="reg-fullname" type="text" required placeholder=" ">
+                        <label for="reg-fullname">Full Name</label>
+                    </div>
+                    <div class="field floating-field">
+                        <input id="reg-org" type="text" required placeholder=" ">
+                        <label for="reg-org">Organization Name</label>
+                    </div>
+                    <div class="field floating-field">
+                        <input id="reg-email" type="email" required placeholder=" ">
+                        <label for="reg-email">Work Email (e.g. admin@deeptrust.com)</label>
+                    </div>
+                    <div class="field floating-field">
+                        <input id="reg-password" type="password" required placeholder=" ">
+                        <label for="reg-password">Password</label>
+                    </div>
+                    <div class="field floating-field">
+                        <input id="reg-confirm" type="password" required placeholder=" ">
+                        <label for="reg-confirm">Confirm Password</label>
+                    </div>
+                    <div class="field">
+                        <label for="reg-role">Role</label>
+                        <select id="reg-role" class="select-role">
+                            <option>Admin</option>
+                            <option>Security Analyst</option>
+                        </select>
+                    </div>
+
+                    <div class="register-options">
+                        <label><input type="checkbox" id="reg-enable-face" checked> Enable Face Registration</label>
+                        <label><input type="checkbox" id="reg-behavior" checked> Capture baseline behavioral pattern</label>
+                        <label><input type="checkbox" id="reg-trusted-device" checked> Register device as trusted</label>
+                        <label><input type="checkbox" id="reg-policy" required> Accept security policy</label>
+                    </div>
+
+                    <div class="face-controls">
+                        <button type="button" class="ghost-btn" id="reg-capture-face-btn">Capture Registration Face</button>
+                        <span class="capture-state" id="reg-face-state">Not captured</span>
+                    </div>
+
+                    <button type="submit" id="register-btn" class="primary-btn">Create Account</button>
+                </form>
+
+                <div class="register-row">
+                    <span>Already registered?</span>
+                    <button type="button" class="link-btn" id="back-to-login">Back to login</button>
+                </div>
+                <div id="register-status" class="auth-status" role="status" aria-live="polite"></div>
+            </section>
+                </div>
+            </section>
+        </section>
+    </main>
+
+    <aside class="alert-panel" id="alert-panel" aria-label="Security alert panel">
+        <div class="alert-header">New Login Attempt Detected</div>
+        <div class="alert-row"><span>Location</span><strong id="alert-location">India, UAE</strong></div>
+        <div class="alert-row"><span>Device</span><strong id="alert-device">Chrome / Windows</strong></div>
+        <div class="alert-row"><span>ISP</span><strong id="alert-isp">Unknown ISP</strong></div>
+        <div class="alert-row"><span>Risk Level</span><strong id="alert-risk">HIGH</strong></div>
+        <div class="alert-row"><span>Time</span><strong id="alert-time">--:--:--</strong></div>
+        <div class="map-dot" aria-hidden="true"></div>
+        <div class="alert-actions">
+            <button type="button" class="ghost-btn" id="approve-btn">Approve</button>
+            <button type="button" class="ghost-btn danger" id="deny-btn">Deny</button>
+        </div>
+    </aside>
+
+    <section class="biometric-overlay" id="biometric-overlay" aria-label="Biometric high-risk mode">
+        <div class="scanner-core">
+            <div class="scanner-ring"></div>
+            <div class="scanner-sweep"></div>
+            <div class="scanner-mesh"></div>
+            <div class="confidence" id="biometric-confidence">0%</div>
+        </div>
+    </section>
+
+    <script type="module" src="js/login.js"></script>
+</body>
+</html>
